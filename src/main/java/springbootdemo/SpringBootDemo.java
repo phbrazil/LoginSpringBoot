@@ -8,24 +8,24 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
 
-//@Controller
+@Controller
 //@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 @EnableAutoConfiguration
 
-@SpringBootApplication
+//@SpringBootApplication
 public class SpringBootDemo {
     
-//    @RequestMapping("/")
-//    @ResponseBody
-//    String home(){
-//        return "/index";
-//    }
-//    
-//     @RequestMapping("/about")
-//    @ResponseBody
-//    String about(){
-//        return "About page";
-//    }
+    @RequestMapping("/")
+    @ResponseBody
+    String home(){
+        return "index";
+    }
+    
+     @RequestMapping("/about")
+    @ResponseBody
+    String about(){
+        return "About page";
+    }
     
     public static void main(String[] args){
         SpringApplication.run(SpringBootDemo.class, args);
